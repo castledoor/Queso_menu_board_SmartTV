@@ -32,6 +32,18 @@ window.onload = function() {
     var row = gs.select('menu_intro');
     document.getElementById("menu_intro_5").innerHTML = row.five;
 
+    var row = gs.select('menu_intro');
+    document.getElementById("menu_intro_6").innerHTML = row.six;
+
+    var row = gs.select('menu_intro');
+    document.getElementById("menu_intro_7").innerHTML = row.seven;
+
+    var row = gs.select('menu_intro');
+    document.getElementById("menu_intro_8").innerHTML = row.eight;
+
+    var row = gs.select('menu_intro');
+    document.getElementById("menu_intro_9").innerHTML = row.nine;
+
     var row = gs.select('menu_item');
     document.getElementById("menu_item_1").innerHTML = row.one;
 
@@ -61,6 +73,24 @@ window.onload = function() {
 
     var row = gs.select('menu_item_price');
     document.getElementById("menu_item_price_5").innerHTML = row.five;
+
+    var row = gs.select('menu_item');
+    document.getElementById("menu_item_6").innerHTML = row.six;
+
+    var row = gs.select('menu_item_price');
+    document.getElementById("menu_item_price_6").innerHTML = row.six;
+
+    var row = gs.select('menu_item');
+    document.getElementById("menu_item_7").innerHTML = row.seven;
+
+    var row = gs.select('menu_item_price');
+    document.getElementById("menu_item_price_7").innerHTML = row.seven;
+
+    var row = gs.select('menu_item');
+    document.getElementById("menu_item_8").innerHTML = row.eight;
+
+    var row = gs.select('menu_item_price');
+    document.getElementById("menu_item_price_8").innerHTML = row.eight;
 
     var row = gs.select('topping');
     document.getElementById("topping_1").innerHTML = row.one;
@@ -107,6 +137,15 @@ window.onload = function() {
     var row = gs.select('salsa');
     document.getElementById("salsa_6").innerHTML = row.six;
 
+    var row = gs.select('salsa');
+    document.getElementById("salsa_7").innerHTML = row.seven;
+
+    var row = gs.select('salsa');
+    document.getElementById("salsa_8").innerHTML = row.eight;
+
+    var row = gs.select('salsa');
+    document.getElementById("salsa_9").innerHTML = row.nine;
+
     var row = gs.select('drink');
     document.getElementById("drink_1").innerHTML = row.one;
 
@@ -122,6 +161,15 @@ window.onload = function() {
     var row = gs.select('drink');
     document.getElementById("drink_5").innerHTML = row.five;
 
+    var row = gs.select('drink');
+    document.getElementById("drink_6").innerHTML = row.six;
+
+    var row = gs.select('drink');
+    document.getElementById("drink_7").innerHTML = row.seven;
+
+    var row = gs.select('drink');
+    document.getElementById("drink_8").innerHTML = row.eight;
+
     var row = gs.select('drink_price');
     document.getElementById("drink_price_1").innerHTML = row.one;
 
@@ -136,6 +184,15 @@ window.onload = function() {
 
     var row = gs.select('drink_price');
     document.getElementById("drink_price_5").innerHTML = row.five;
+
+    var row = gs.select('drink_price');
+    document.getElementById("drink_price_6").innerHTML = row.six;
+
+    var row = gs.select('drink_price');
+    document.getElementById("drink_price_7").innerHTML = row.seven;
+
+    var row = gs.select('drink_price');
+    document.getElementById("drink_price_8").innerHTML = row.eight;
   });
 }
 

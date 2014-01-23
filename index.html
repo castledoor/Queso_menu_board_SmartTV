@@ -14,6 +14,77 @@
 
       document.write('<link type="text/css" rel="stylesheet" href="'+ config +'css/queso.css"/>');
     </script>
+    <script type="text/javascript" src="js/gspreadsheet.js"></script>
+ 
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+
+    <script>
+
+    // Customise those settings
+
+    var seconds = 5;
+    var divid = "timediv";
+    var url = "boo.php";
+
+    ////////////////////////////////
+    //
+    // Refreshing the DIV
+    //
+    ////////////////////////////////
+
+    function refreshdiv(){
+
+    // The XMLHttpRequest object
+
+    var xmlHttp;
+    try{
+    xmlHttp=new XMLHttpRequest(); // Firefox, Opera 8.0+, Safari
+    }
+    catch (e){
+    try{
+    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); // Internet Explorer
+    }
+    catch (e){
+    try{
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    catch (e){
+    alert("Your browser does not support AJAX.");
+    return false;
+    }
+    }
+    }
+
+    // Timestamp for preventing IE caching the GET request
+
+    fetch_unix_timestamp = function()
+    {
+    return parseInt(new Date().getTime().toString().substring(0, 10))
+    }
+
+    var timestamp = fetch_unix_timestamp();
+    var nocacheurl = url+"?t="+timestamp;
+
+    // The code...
+
+    xmlHttp.onreadystatechange=function(){
+    if(xmlHttp.readyState==4){
+    document.getElementById(divid).innerHTML=xmlHttp.responseText;
+    setTimeout('refreshdiv()',seconds*1000);
+    }
+    }
+    xmlHttp.open("GET",nocacheurl,true);
+    xmlHttp.send(null);
+    }
+
+    // Start the refreshing process
+
+    var seconds;
+    window.onload = function startrefresh(){
+    setTimeout('refreshdiv()',seconds*1000);
+    }
+
+    </script>
 	</head>
 	<body>
 		<div id="container">
@@ -36,6 +107,12 @@
 					<div class="col-md-4">
 						<div id="menu_intro_4"></div>
 						<div id="menu_intro_5"></div>
+						<div id="menu_intro_6"></div>
+					</div>
+					<div class="col-md-4">
+						<div id="menu_intro_7"></div>
+						<div id="menu_intro_8"></div>
+						<div id="menu_intro_9"></div>
 					</div>
 				</div>
 
@@ -51,19 +128,25 @@
 						<div id="menu_item_1"></div>
 						<div id="menu_item_2"></div>
 						<div id="menu_item_3"></div>
+						<div id="menu_item_7"></div>
 					</div>
 					<div class="col-md-2">
 						<div id="menu_item_price_1"></div>
 						<div id="menu_item_price_2"></div>
 						<div id="menu_item_price_3"></div>
+						<div id="menu_item_price_7"></div>
 					</div>
 					<div class="col-md-4">
 						<div id="menu_item_4"></div>
 						<div id="menu_item_5"></div>
+						<div id="menu_item_6"></div>
+						<div id="menu_item_8"></div>
 					</div>
 					<div class="col-md-1">
 						<div id="menu_item_price_4"></div>
 						<div id="menu_item_price_5"></div>
+						<div id="menu_item_price_6"></div>
+						<div id="menu_item_price_8"></div>
 					</div>
 				</div>
 
@@ -100,15 +183,20 @@
 				</header>
 
 				<div class="row-fluid">
-					<div class="col-md-5">
+					<div class="col-md-4">
 						<div id="salsa_1"></div>
 						<div id="salsa_2"></div>
 						<div id="salsa_3"></div>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-4">
 						<div id="salsa_4"></div>
 						<div id="salsa_5"></div>
 						<div id="salsa_6"></div>
+					</div>
+					<div class="col-md-4">
+						<div id="salsa_7"></div>
+						<div id="salsa_8"></div>
+						<div id="salsa_9"></div>
 					</div>
 				</div>
 
@@ -124,19 +212,25 @@
 						<div id="drink_1"></div>
 						<div id="drink_2"></div>
 						<div id="drink_3"></div>
+						<div id="drink_6"></div>
 					</div>
 					<div class="col-md-2">
 						<div id="drink_price_1"></div>
 						<div id="drink_price_2"></div>
 						<div id="drink_price_3"></div>
+						<div id="drink_price_6"></div>
 					</div>
 					<div class="col-md-4">
 						<div id="drink_4"></div>
 						<div id="drink_5"></div>
+						<div id="drink_7"></div>
+						<div id="drink_8"></div>
 					</div>
 					<div class="col-md-1">
 						<div id="drink_price_4"></div>
 						<div id="drink_price_5"></div>
+						<div id="drink_price_7"></div>
+						<div id="drink_price_8"></div>
 					</div>
 				</div>
 
@@ -144,6 +238,7 @@
 					
 			<script type="text/javascript" src="js/gspreadsheet.js"></script>
 			<script type="text/javascript" src="js/queso.js"></script>
+			<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 		</div>
 	</body>	
 </html>

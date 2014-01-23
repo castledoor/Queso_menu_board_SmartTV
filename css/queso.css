@@ -114,10 +114,9 @@ width: 720px;
 	                          rgba(0,0,0,0.1);
 	position: relative;
 	z-index: 1;
-
 }
 
-#topping_1, #topping_2, #topping_3, #topping_4, #topping_5, #topping_6, #topping_7, #topping_8, #topping_9, #menu_intro_1, #menu_intro_2, #menu_intro_3, #menu_intro_4, #menu_intro_5, #menu_item_1, #menu_item_price_1, #menu_item_2, #menu_item_price_2, #menu_item_3, #menu_item_price_3, #menu_item_4, #menu_item_price_4, #menu_item_5, #menu_item_price_5, #salsa_1, #salsa_2, #salsa_3, #salsa_4, #salsa_5, #salsa_6, #drink_1, #drink_2, #drink_3, #drink_4, #drink_5, #drink_price_1, #drink_price_2, #drink_price_3, #drink_price_4, #drink_price_5
+#topping_1, #topping_2, #topping_3, #topping_4, #topping_5, #topping_6, #topping_7, #topping_8, #topping_9, #menu_intro_1, #menu_intro_2, #menu_intro_3, #menu_intro_4, #menu_intro_5, #menu_item_1, #menu_item_price_1, #menu_item_2, #menu_item_price_2, #menu_item_3, #menu_item_price_3, #menu_item_4, #menu_item_price_4, #menu_item_5, #menu_item_price_5,#menu_item_6, #menu_item_price_6, #salsa_1, #salsa_2, #salsa_3, #salsa_4, #salsa_5, #salsa_6, #salsa_7,#salsa_8, #salsa_9 ,#drink_1, #drink_2, #drink_3, #drink_4, #drink_5 , #drink_6, #drink_7, #drink_8, #drink_price_1, #drink_price_2, #drink_price_3, #drink_price_4, #drink_price_5 ,#menu_intro_5,#menu_intro_6, #drink_price_6, #drink_price_7, #drink_price_8, #drink_price_9, #menu_intro_7,#menu_intro_8, #menu_intro_9,#menu_item_7,#menu_item_price_7,#menu_item_8,#menu_item_price_8
 {
 	font-family: 'League Gothic';
 	color: #9E005D;
